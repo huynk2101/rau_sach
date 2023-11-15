@@ -1,0 +1,85 @@
+*{
+    font-family: 'Quicksand', sans-serif;
+}
+img[alt~="icon"]{
+    margin-right: 45px;
+}
+li a{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+a{
+    text-decoration: none!important;
+    color: gray!important;
+}
+.title{
+    padding: 10px;
+    position: absolute;
+    color: white;
+    bottom: 0;
+    left: 0;
+    height: 70px;
+    background: rgba(0, 0, 0, 0.5);
+}
+.button{
+    background: transparent;
+    padding-bottom: 8px;
+    color: white;
+    text-decoration: none;
+    border: 0;
+    z-index: 1;
+    position: relative;
+}
+.button::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: rgb(223, 219, 218);
+    z-index: -1;
+    transition: all 1s;
+}
+.button:hover::before{
+    width: 100%;
+}
+.col-md-2 .card,.card{
+    height: 340px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    /* Kích thước ban đầu của thẻ */
+}
+.card-image {
+    /* Chuyển đổi thẻ con chứa ảnh thành một layer mới để thay đổi kích thước */
+    overflow: hidden;
+    width: 100%;
+    transition: transform 3s ease-in-out;
+}
+.card:hover .card-image {
+    /* Khi hover vào thẻ chứa ảnh, phóng to ảnh */
+    transform: scale(1.5);
+}
+.img-top {
+    width: 100%;
+    object-fit: cover;
+}
+.card-img-overlay{
+    margin-top: 130px;
+    color: white;
+}
+.card-body p{
+    color: red;
+}
+del{
+    color: lightgrey;
+}
+ul{
+    list-style: none;
+}
+.nav{
+    gap: 50px;
+}
+table,td,th,tr{
+    border: 1px solid black; 
+    padding: 4px;   
+}
