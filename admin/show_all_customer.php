@@ -30,7 +30,7 @@
     }
     $row_per_page = 10;
     $per_row = ($page - 1) * $row_per_page;
-    $sql = mysqli_query($conn, "SELECT * FROM tbl_khachhang WHERE permission = 0 LIMIT ".$per_row.",".$row_per_page);
+    $sql = mysqli_query($conn, "SELECT * FROM tbl_khachhang WHERE permission = 0 LIMIT " . $per_row . "," . $row_per_page);
     $total_record = mysqli_query($conn, "SELECT * FROM tbl_khachhang WHERE permission = 0");
     $total_record = $total_record->num_rows;
     $total_page = ceil($total_record / $row_per_page);
@@ -70,47 +70,47 @@
 
     </table>
     <ul class="pagination">
-    <?php
-    if ($page > 1) {
-        $prev_page = $page - 1;
-        ?>
-        <li class="page-item">
-            <a class="page-link" href="?page= <?php echo $prev_page ?>">
-                Prev
-            </a>
-        </li>
-    <?php } ?>
-    <?php
-    for ($num_page = 1; $num_page <= $total_page; $num_page++) { ?>
-        <?php if ($num_page != $page) { ?>
-            <?php if ($num_page > $page - 3 && $num_page < $page + 3) {
-                ?>
-                <li class="page-item">
-                    <a class="page-link" href="?page= <?php echo $num_page;?>">
-                        <?php echo $num_page;
-                        ?>
-                    </a>
-                </li>
-            <?php } ?>
-        <?php } else { ?>
+        <?php
+        if ($page > 1) {
+            $prev_page = $page - 1;
+            ?>
             <li class="page-item">
-                <a class="page-link bg-dark">
-                    <?php echo $num_page ?>
+                <a class="page-link" href="?page= <?php echo $prev_page ?>">
+                    Prev
                 </a>
             </li>
         <?php } ?>
-    <?php } ?>
-    <?php
-    if ($page < $total_page) {
-        $next_page = $page + 1;
-        ?>
-        <li class="page-item">
-            <a class="page-link" href="?page= <?php echo $next_page ?>">
-                Next
-            </a>
-        </li>
-    <?php } ?>
-</ul>
+        <?php
+        for ($num_page = 1; $num_page <= $total_page; $num_page++) { ?>
+            <?php if ($num_page != $page) { ?>
+                <?php if ($num_page > $page - 3 && $num_page < $page + 3) {
+                    ?>
+                    <li class="page-item">
+                        <a class="page-link" href="?page= <?php echo $num_page; ?>">
+                            <?php echo $num_page;
+                            ?>
+                        </a>
+                    </li>
+                <?php } ?>
+            <?php } else { ?>
+                <li class="page-item">
+                    <a class="page-link bg-dark">
+                        <?php echo $num_page ?>
+                    </a>
+                </li>
+            <?php } ?>
+        <?php } ?>
+        <?php
+        if ($page < $total_page) {
+            $next_page = $page + 1;
+            ?>
+            <li class="page-item">
+                <a class="page-link" href="?page= <?php echo $next_page ?>">
+                    Next
+                </a>
+            </li>
+        <?php } ?>
+    </ul>
 </body>
 
 </html>

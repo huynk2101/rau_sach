@@ -1,4 +1,4 @@
-<?php require('../include/check_admin.php')?>
+<?php require('../include/check_admin.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,146 +22,80 @@
 
 <body>
     <div class="container">
-    <ul class="nav nav-tabs" role="tablist">
-        <li class="nav-item">
-            <a class="nav-link active" data-bs-toggle="tab" href="#menu0">Chờ giao</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="tab" href="#menu1">Đang giao</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="tab" href="#menu2">Đã giao</a>
-        </li>
-    </ul>
-    <?php require("../db/connect.php");?>
-    <!-- Tab panes -->
-    <div class="tab-content">
-        <div id="menu0" class="container tab-pane active"><br>
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link" href="?detail=1">Chờ giao</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="?detail=2">Đang giao</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="?detail=3">Đã giao</a>
+            </li>
+        </ul>
+        <?php require("../db/connect.php");
+        $detail = "";
+        if (isset($_GET["detail"])) {
+            $detail = $_GET["detail"];
+        } else {
+            $detail = "1";
+        }
+
+        if ($detail == "1") {
+            require "./delivery_detail/cho_giao.php";
+        } else if ($detail == "2") {
+            require "./delivery_detail/dang_giao.php";
+        } else {
+            require "./delivery_detail/da_giao.php";
+        }
+
+        ?>
+        <ul class="pagination">
             <?php
-            
-
-            $sql = "SELECT * FROM tbl_order WHERE status = 0";
-            $result = mysqli_query($conn, $sql);
-
-
-            ?>
-            <table>
-                <tr>
-                    <th>Tên người nhận</th>
-                    <th>Địa chỉ</th>
-                    <th>Số điện thoại người nhận</th>
-                    <th>Ngày đặt hàng</th>
-                    <th>Tổng tiền</th>
-                </tr>
-                <?php while ($orders = mysqli_fetch_array($result)) { ?>
-                    <tr>
-                        <td>
-                            <?php echo $orders['receiver_name'] ?>
-                        </td>
-                        <td>
-                            <?php echo $orders['address'] ?>
-                        </td>
-                        <td>
-                            <?php echo $orders['phone'] ?>
-                        </td>
-                        <td>
-                            <?php echo $orders['created_at'] ?>
-                        </td>
-                        <td>
-                            <?php echo $orders['total'] ?>
-                        </td>
-                        <td>
-                            <a href="process_delivery.php?id=<?php echo $orders['id']?>" class="border">Giao hàng</a>
-                        </td>
-                    </tr>
-                    <?php
-                }
+            if ($page > 1) {
+                $prev_page = $page - 1;
                 ?>
-            </table>
-        </div>
-        <div id="menu1" class="container tab-pane fade"><br>
+                <li class="page-item">
+                    <a class="page-link" href="?page=<?php echo $prev_page;?>&detail=<?php echo $detail;?>">
+                        Prev
+                    </a>
+                </li>
+            <?php } ?>
             <?php
-
-            $sql = "SELECT * FROM tbl_order WHERE status = 1 ";
-            $result = mysqli_query($conn, $sql);
-
-
-            ?>
-            <table>
-                <tr>
-                    <th>Tên người nhận</th>
-                    <th>Địa chỉ</th>
-                    <th>Số điện thoại người nhận</th>
-                    <th>Ngày đặt hàng</th>
-                    <th>Tổng tiền</th>
-                </tr>
-                <?php while ($orders = mysqli_fetch_array($result)) { ?>
-                    <tr>
-                        <td>
-                            <?php echo $orders['receiver_name'] ?>
-                        </td>
-                        <td>
-                            <?php echo $orders['address'] ?>
-                        </td>
-                        <td>
-                            <?php echo $orders['phone'] ?>
-                        </td>
-                        <td>
-                            <?php echo $orders['created_at'] ?>
-                        </td>
-                        <td>
-                            <?php echo $orders['total'] ?>
-                        </td>
-                    </tr>
-                    <?php
-                }
-
-                ?>
-            </table>
-        </div>
-        <div id="menu2" class="container tab-pane fade"><br>
+            for ($num_page = 1; $num_page <= $total_page; $num_page++) { ?>
+                <?php if ($num_page != $page) { ?>
+                    <?php if ($num_page > $page - 3 && $num_page < $page + 3) {
+                        ?>
+                        <li class="page-item">
+                            <a class="page-link" href="?page= <?php echo $num_page; ?>&detail=<?php echo $detail;?>">
+                                <?php echo $num_page;
+                                ?>
+                            </a>
+                        </li>
+                    <?php } ?>
+                <?php } else { ?>
+                    <li class="page-item">
+                        <a class="page-link bg-dark">
+                            <?php echo $num_page ?>
+                        </a>
+                    </li>
+                <?php } ?>
+            <?php } ?>
             <?php
-
-            $sql = "SELECT * FROM tbl_order WHERE status = 2 ";
-            $result = mysqli_query($conn, $sql);
-
-
-            ?>
-            <table>
-                <tr>
-                    <th>Tên người nhận</th>
-                    <th>Địa chỉ</th>
-                    <th>Số điện thoại người nhận</th>
-                    <th>Ngày đặt hàng</th>
-                    <th>Tổng tiền</th>
-                </tr>
-                <?php while ($orders = mysqli_fetch_array($result)) { ?>
-                    <tr>
-                        <td>
-                            <?php echo $orders['receiver_name'] ?>
-                        </td>
-                        <td>
-                            <?php echo $orders['address'] ?>
-                        </td>
-                        <td>
-                            <?php echo $orders['phone'] ?>
-                        </td>
-                        <td>
-                            <?php echo $orders['created_at'] ?>
-                        </td>
-                        <td>
-                            <?php echo $orders['total'] ?>
-                        </td>
-                    </tr>
-                    <?php
-                }
-
+            if ($page < $total_page) {
+                $next_page = $page + 1;
                 ?>
-            </table>
-        </div>
+                <li class="page-item">
+                    <a class="page-link" href="?page= <?php echo $next_page; ?>&detail=<?php echo $detail;?>">
+                        Next
+                    </a>
+                </li>
+            <?php } ?>
+        </ul>
     </div>
+
     </div>
-<?php mysqli_close($conn);?>
+    <?php mysqli_close($conn); ?>
 </body>
 
 </html>
