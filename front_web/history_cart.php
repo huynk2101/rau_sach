@@ -33,7 +33,7 @@
                 <?php
 
                 $customer_id = $_SESSION['id'];
-                $sql = "SELECT * FROM tbl_order WHERE cus_id = $customer_id && status = 0 || status = 1";
+                $sql = "SELECT * FROM tbl_order WHERE cus_id = $customer_id && status = 0 || status = 1 ORDER BY created_at DESC LIMIT 0,10";
                 $result = mysqli_query($conn, $sql);
 
 
@@ -83,7 +83,7 @@
                 <?php
 
                 $customer_id = $_SESSION['id'];
-                $sql = "SELECT * FROM tbl_order WHERE cus_id = $customer_id && status = 2";
+                $sql = "SELECT * FROM tbl_order WHERE cus_id = $customer_id && status = 2 ORDER BY created_at DESC LIMIT 0,10";
                 $result = mysqli_query($conn, $sql);
 
 

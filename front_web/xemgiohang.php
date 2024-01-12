@@ -32,7 +32,7 @@ if (!empty($_SESSION["cart"])) {
 
 <body>
     <table class="w-100 p-5">
-        <a href="history_cart.php">Lịch sử mua hàng</a><br>
+        <a href="history_cart.php" target="_blank">Lịch sử mua hàng</a><br>
         <a href="sanpham.php">Tiếp tục mua</a><br>
         <?php
         $total_price = 0;
@@ -85,7 +85,7 @@ if (!empty($_SESSION["cart"])) {
         $each = mysqli_fetch_array($result);
 
         ?>
-        <div class="container mt-3 w-50"">
+        <div class="container mt-3 w-50">
         <h2>Thông tin người nhận</h2>
         <form action=" checkout.php" method="post">
             <div class="mb-3 mt-3">

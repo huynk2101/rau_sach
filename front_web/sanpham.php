@@ -32,6 +32,8 @@
                         <?php include "../include/category_all.php" ?>
                     </ul>
                 </div>
+                
+
             </div>
             <div class="col-9">
                 <div class="d-flex">

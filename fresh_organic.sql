@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:8081
--- Generation Time: Jan 10, 2024 at 09:40 AM
+-- Generation Time: Jan 12, 2024 at 03:11 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -92,13 +92,14 @@ CREATE TABLE `tbl_order` (
 INSERT INTO `tbl_order` (`id`, `cus_id`, `receiver_name`, `address`, `phone`, `created_at`, `total`, `status`) VALUES
 (28, 1, 'huy', 'hn', '0123456789', '2023-11-12 18:22:03', 115000, 2),
 (29, 1, 'huy', 'tầng 18 địa ngục', '0123456789', '2023-11-12 21:07:49', 225000, 2),
-(30, 1, 'huy', 'hn', '0123456789', '2023-11-12 21:09:14', 100000, 1),
-(31, 1, 'huy', 'hn', '0123456789', '2023-11-09 04:21:54', 25000, 0),
+(30, 1, 'huy', 'hn', '0123456789', '2024-01-11 16:04:31', 100000, 2),
+(31, 1, 'huy', 'hn', '0123456789', '2024-01-11 16:03:53', 25000, 1),
 (32, 1, 'huy', 'hn', '0123456789', '2023-11-09 04:35:29', 48000, 0),
 (33, 1, 'huy', 'hn', '0123456789', '2023-11-12 16:25:54', 28000, 0),
 (34, 1, 'huy', 'hn', '0123456789', '2023-11-12 17:53:53', 108000, 0),
 (35, 1, 'huy', 'hn', '0123456789', '2023-11-12 21:06:51', 18000, 0),
-(36, 1, 'huy', 'hn', '0123456789', '2023-11-12 21:08:22', 25000, 0);
+(36, 1, 'huy', 'hn', '0123456789', '2023-11-12 21:08:22', 25000, 0),
+(38, 1, 'huy', 'hn', '0123456789', '2024-01-12 12:24:12', 18000, 0);
 
 -- --------------------------------------------------------
 
@@ -127,7 +128,8 @@ INSERT INTO `tbl_order_product` (`order_id`, `product_id`, `quantity`, `price`) 
 (33, 3, 4, 28000),
 (34, 10, 6, 108000),
 (35, 10, 1, 18000),
-(36, 6, 1, 25000);
+(36, 6, 1, 25000),
+(38, 10, 1, 18000);
 
 -- --------------------------------------------------------
 
@@ -142,6 +144,7 @@ CREATE TABLE `tbl_sanpham` (
   `product_name` varchar(255) NOT NULL,
   `product_price` int(11) NOT NULL,
   `detail` text NOT NULL,
+  `product_quantity` int(11) NOT NULL,
   `active` int(11) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -149,14 +152,14 @@ CREATE TABLE `tbl_sanpham` (
 -- Dumping data for table `tbl_sanpham`
 --
 
-INSERT INTO `tbl_sanpham` (`product_id`, `category_id`, `product_image`, `product_name`, `product_price`, `detail`, `active`) VALUES
-(1, 1, 'cachua.png', 'Cà chua', 10000, 'chưa có', 1),
-(2, 3, 'chuoi.png', 'Chuối', 12000, 'chưa có', 1),
-(3, 1, 'dau.png', 'Đậu', 7000, 'chưa có', 1),
-(4, 1, 'duachuot.png', 'Dưa chuột', 6000, 'chưa có', 1),
-(5, 3, 'duahau.png', 'Dưa hấu', 20000, 'chưa có', 1),
-(6, 3, 'vai.png', 'Vải', 25000, 'chưa có', 1),
-(10, 3, 'dua(thom).png', 'Dứa', 18000, 'chưa có', 1);
+INSERT INTO `tbl_sanpham` (`product_id`, `category_id`, `product_image`, `product_name`, `product_price`, `detail`, `product_quantity`, `active`) VALUES
+(1, 1, 'cachua.png', 'Cà chua', 10000, 'chưa có', 10, 1),
+(2, 3, 'chuoi.png', 'Chuối', 12000, 'chưa có', 10, 1),
+(3, 1, 'dau.png', 'Đậu', 7000, 'chưa có', 10, 1),
+(4, 1, 'duachuot.png', 'Dưa chuột', 6000, 'chưa có', 10, 1),
+(5, 3, 'duahau.png', 'Dưa hấu', 20000, 'chưa có', 10, 1),
+(6, 3, 'vai.png', 'Vải', 25000, 'chưa có', 10, 1),
+(10, 3, 'dua(thom).png', 'Dứa', 18000, 'chưa có', 14, 1);
 
 --
 -- Indexes for dumped tables
@@ -215,7 +218,7 @@ ALTER TABLE `tbl_khachhang`
 -- AUTO_INCREMENT for table `tbl_order`
 --
 ALTER TABLE `tbl_order`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `tbl_sanpham`

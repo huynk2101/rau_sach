@@ -1,10 +1,9 @@
 <?php 
 session_start();
 $name_receiver = $_POST['name_receiver'];
-echo $name_receiver;
 $phone_receiver = $_POST['phone_receiver'];
 $address_receiver = $_POST['address_receiver'];
-echo $address_receiver;
+
 
 require('../db/connect.php');
 
