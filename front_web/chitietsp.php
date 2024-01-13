@@ -29,6 +29,15 @@
 <body>
     <div class="container-fluid">
         <?php
+        $param = "";
+        if (isset($_GET["page"])) {
+            $page1 = ($_GET["page"]);
+            $param = "&page=" . $page1;
+        }
+        if (isset($_GET["url"])) {
+            $url = $_GET["url"];
+            $param .= "&url=".$url;
+        }
         include("../db/connect.php");
         $product = mysqli_query($conn, "SELECT * FROM tbl_sanpham where product_id =" . $_GET['pro_id']);
         $result = mysqli_fetch_assoc($product);
@@ -48,7 +57,7 @@
                     </p>
                 </div><br>
                 <div class="text-center">
-                    <a href="themgiohang.php?pro_id=<?php echo $result['product_id'] ?>">
+                    <a href="themgiohang.php?pro_id=<?php echo $result['product_id'] ?><?php echo $param; ?>">
                         <button style="background-color:green;width:100%;height:30px;border:0;">Thêm vào giỏ</button>
                     </a>
                 </div>

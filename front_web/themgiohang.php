@@ -18,8 +18,15 @@ if (empty($_SESSION['cart'][$id])) {
 } else {
     $_SESSION['cart'][$id]['product_quantity']++;
 }
-$newQuantity = $product['product_quantity'] - $_SESSION['cart'][$id]['product_quantity'];
+$newQuantity = $product['product_quantity'] - 1;
 $updateSql = "UPDATE tbl_sanpham SET product_quantity = $newQuantity WHERE product_id = $id";
+
+
+$url = "trangchu.php";
+if (isset($_GET["url"])) {
+    $url = $_GET["url"];
+}
+echo $url;
 mysqli_query($conn, $updateSql);
-header("Location:xemgiohang.php");
+header("Location:$url#$id");
 ?>

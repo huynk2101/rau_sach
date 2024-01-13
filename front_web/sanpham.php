@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootstrap Site</title>
     <link rel="stylesheet" href="../css/style.css">
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
         integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
@@ -32,14 +33,12 @@
                         <?php include "../include/category_all.php" ?>
                     </ul>
                 </div>
-                
-
             </div>
             <div class="col-9">
                 <div class="d-flex">
                     <h3>Tất cả sản phẩm</h3>
-                    
-                    
+
+
                 </div>
                 <?php include "../include/product_display.php"; ?>
             </div>

@@ -34,19 +34,20 @@ if (!empty($_SESSION["cart"])) {
     <table class="w-100 p-5">
         <a href="history_cart.php" target="_blank">Lịch sử mua hàng</a><br>
         <a href="sanpham.php">Tiếp tục mua</a><br>
+        <tr>
+            <th>Ảnh</th>
+            <th>Tên sản phẩm</th>
+            <th>Giá</th>
+            <th>Số lượng</th>
+            <th>Tổng tiền</th>
+            <th>Xóa</th>
+        </tr>
         <?php
         $total_price = 0;
         if ($cart == [""]) {
             echo "Giỏ hàng trống!";
         } else { ?>
-            <tr>
-                <th>Ảnh</th>
-                <th>Tên sản phẩm</th>
-                <th>Giá</th>
-                <th>Số lượng</th>
-                <th>Tổng tiền</th>
-                <th>Xóa</th>
-            </tr>
+
             <?php foreach ($cart as $id => $product) { ?>
                 <tr>
                     <td><img height="100" width="100" src="../img/product/<?php echo $product['product_image'] ?>"
@@ -86,24 +87,24 @@ if (!empty($_SESSION["cart"])) {
 
         ?>
         <div class="container mt-3 w-50">
-        <h2>Thông tin người nhận</h2>
-        <form action=" checkout.php" method="post">
-            <div class="mb-3 mt-3">
-                <label for="name">Name:</label>
-                <input type="text" class="form-control" required id="name" placeholder="Enter name" name="name_receiver"
-                    value="<?php echo $each['name'] ?>">
-            </div>
-            <div class="mb-3 mt-3">
-                <label for="phone">Phone:</label>
-                <input type="phone" class="form-control" required id="phone" placeholder="Enter phone number"
-                    name="phone_receiver" value="<?php echo $each['phone_number'] ?>">
-            </div>
-            <div class="mb-3 mt-3">
-                <label for="address">Address:</label>
-                <input type="text" class="form-control" required id="address" placeholder="Enter address"
-                    name="address_receiver" value="<?php echo $each['address'] ?>">
-            </div>
-            <button type="submit" class="btn btn-primary">Đặt hàng</button>
+            <h2>Thông tin người nhận</h2>
+            <form action=" checkout.php" method="post">
+                <div class="mb-3 mt-3">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" required id="name" placeholder="Enter name" name="name_receiver"
+                        value="<?php echo $each['name'] ?>">
+                </div>
+                <div class="mb-3 mt-3">
+                    <label for="phone">Phone:</label>
+                    <input type="phone" class="form-control" required id="phone" placeholder="Enter phone number"
+                        name="phone_receiver" value="<?php echo $each['phone_number'] ?>">
+                </div>
+                <div class="mb-3 mt-3">
+                    <label for="address">Address:</label>
+                    <input type="text" class="form-control" required id="address" placeholder="Enter address"
+                        name="address_receiver" value="<?php echo $each['address'] ?>">
+                </div>
+                <button type="submit" class="btn btn-primary">Đặt hàng</button>
             </form>
         </div>
     <?php } ?>
