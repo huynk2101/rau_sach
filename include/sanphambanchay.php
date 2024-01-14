@@ -1,5 +1,5 @@
 <?php
-require('../db/connect.php');
+require(__DIR__ .'/../db/connect.php');
 
 $sql = "SELECT * FROM tbl_order_product GROUP BY product_id ORDER BY quantity DESC LIMIT 4";
 $result = mysqli_query($conn, $sql);

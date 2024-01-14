@@ -10,7 +10,7 @@ $url=$_SERVER['REQUEST_URI'];
     <div class="card w-100">
         <div class="img-top"><a
                 href="../front_web/chitietsp.php?pro_id=<?php echo $row['product_id'] ?>&url=<?php echo $url;?><?php echo $param; ?>"><img
-                    src="../img/product/<?php echo $row['product_image'] ?>" width="100%" height="200px"
+                    src="./img/product/<?php echo $row['product_image'] ?>" width="100%" height="200px"
                     alt="image"></a></div>
         <div class="card-body">
             <h6 class="card-title">
@@ -22,11 +22,11 @@ $url=$_SERVER['REQUEST_URI'];
                 </p>
                 <div class="text-center">
                     <?php if (empty($_SESSION['id'])) { ?>
-                        <a href="../front_web/signin.php"><button>Thêm vào giỏ hàng</button></a>
+                        <a href="__DIR__ ./../front_web/signin.php"><button>Thêm vào giỏ hàng</button></a>
 
                     <?php } else { ?>
                         <a
-                            href="../front_web/themgiohang.php?pro_id=<?php echo $row['product_id'] ?>&url=<?php echo $url;?><?php echo $param; ?>"><button>Thêm
+                            href="__DIR__ ./../front_web/themgiohang.php?pro_id=<?php echo $row['product_id'] ?>&url=<?php echo $url;?><?php echo $param; ?>"><button>Thêm
                                 vào giỏ hàng</button></a>
                     <?php } ?>
                 </div>

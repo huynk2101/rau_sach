@@ -17,7 +17,7 @@ if ($number_rows == 1) {
         header('location:../admin/menu.php');
         exit();
     }
-    header("location:trangchu.php");
+    header("location:../index.php");
     exit();
 }
 header("location:signin.php?error=Tài khoản hoặc mật khẩu không chính xác!");

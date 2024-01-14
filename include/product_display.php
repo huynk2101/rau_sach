@@ -7,7 +7,7 @@ if (isset($_GET['page'])) {
 }
 $row_per_page = 3;
 $per_row = ($page - 1) * $row_per_page;
-include "../include/product.php";
+include __DIR__."/../include/product.php";
 $result = mysqli_query($conn, $sql);
 $total_record = $total_record->num_rows;
 $total_page = ceil($total_record / $row_per_page);
@@ -25,4 +25,4 @@ $total_page = ceil($total_record / $row_per_page);
 </div>
 <?php
 
-include "../include/pagination.php"; ?>
+include __DIR__."/../include/pagination.php"; ?>

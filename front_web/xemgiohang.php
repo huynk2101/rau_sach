@@ -33,7 +33,7 @@ if (!empty($_SESSION["cart"])) {
 <body>
     <table class="w-100 p-5">
         <a href="history_cart.php" target="_blank">Lịch sử mua hàng</a><br>
-        <a href="sanpham.php">Tiếp tục mua</a><br>
+        <a href="../index.php">Tiếp tục mua</a><br>
         <tr>
             <th>Ảnh</th>
             <th>Tên sản phẩm</th>

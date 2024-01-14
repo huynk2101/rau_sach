@@ -1,10 +1,15 @@
 <ul class="pagination">
     <?php
+    $tab_name="";
+    if (isset($_GET['tab'])) {
+        $tab=$_GET['tab'];
+        $tab_name = "tab=".$tab."&";
+    }
     if ($page > 1) {
         $prev_page = $page - 1;
         ?>
         <li class="page-item">
-            <a class="page-link" href="?page= <?php echo $prev_page ?><?php include 'category_search.php' ?>">
+            <a class="page-link" href="?<?php echo $tab_name;?>page= <?php echo $prev_page ?><?php include 'category_search.php' ?>">
                 Prev
             </a>
         </li>
@@ -15,7 +20,7 @@
             <?php if ($num_page > $page - 3 && $num_page < $page + 3) {
                 ?>
                 <li class="page-item">
-                    <a class="page-link" href="?page= <?php echo $num_page . $category_this_id . $search_product;?>">
+                    <a class="page-link" href="?<?php echo $tab_name;?>page= <?php echo $num_page . $category_this_id . $search_product;?>">
                         <?php echo $num_page;
                         ?>
                     </a>
@@ -34,7 +39,7 @@
         $next_page = $page + 1;
         ?>
         <li class="page-item">
-            <a class="page-link" href="?page= <?php echo $next_page ?><?php include 'category_search.php' ?>">
+            <a class="page-link" href="?<?php echo $tab_name;?>page= <?php echo $next_page ?><?php include 'category_search.php' ?>">
                 Next
             </a>
         </li>

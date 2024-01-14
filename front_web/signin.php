@@ -33,7 +33,7 @@
             </div>
             <button type="submit" class="btn btn-primary">Đăng nhập</button>
             <a href="signup.php">Đăng ký</a>
-            <a href="trangchu.php">Về trang chủ</a>
+            <a href="../index.php">Về trang chủ</a>
         </form>
     </div>
 
