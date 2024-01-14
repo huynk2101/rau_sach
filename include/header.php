@@ -1,7 +1,7 @@
 <?php session_start();
 $tab = "";
 if (isset($_GET["tab"])) {
-    $tab = $_GET["tab"]; 
+    $tab = $_GET["tab"];
 }
 ?>
 <div class="header container pt-4 pb-4">
@@ -17,49 +17,48 @@ if (isset($_GET["tab"])) {
         <!-- Navbar Content -->
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item <?php 
-                if ($tab=="trangchu"||$tab=="") {
+                <li class="nav-item <?php
+                if ($tab == "trangchu" || $tab == "") {
                     echo "active";
                 }
                 ?>">
                     <a class="nav-link" href="?tab=trangchu">Trang chủ</a>
                 </li>
-                <li class="nav-item <?php 
-                if ($tab=="sanpham") {
+                <li class="nav-item <?php
+                if ($tab == "sanpham") {
                     echo "active";
                 }
                 ?>">
                     <a class="nav-link" href="?tab=sanpham">Sản phẩm</a>
                 </li>
-                <li class="nav-item <?php 
-                if ($tab=="blog") {
+                <li class="nav-item <?php
+                if ($tab == "blog") {
                     echo "active";
                 }
                 ?>">
                     <a class="nav-link" href="?tab=blog">Blog</a>
                 </li>
-                <li class="nav-item <?php 
-                if ($tab=="gioithieu") {
+                <li class="nav-item <?php
+                if ($tab == "gioithieu") {
                     echo "active";
                 }
                 ?>">
                     <a class="nav-link" href="?tab=gioithieu">Giới thiệu</a>
                 </li>
                 <li class="nav-item
-                <?php 
-                if ($tab=="lienhe") {
+                <?php
+                if ($tab == "lienhe") {
                     echo "active";
                 }
                 ?>">
                     <a class="nav-link" href="?tab=lienhe">Liên hệ</a>
                 </li>
             </ul>
-
             <!-- Search Form -->
-            <form class="form-inline ml-auto d-flex" method="get" action="">
+            <form class="form-inline ml-auto d-flex" method="get" action="" onsubmit="return checkSearch()">
                 <input type="text" name="tab" value="sanpham" hidden>
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-
+                <input class="form-control mr-sm-2" name="search" id="searchInput" type="search" placeholder="Search"
+                    aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
             <button class="btn btn-outline-primary my-2 my-sm-0 ml-2" type="submit">
@@ -80,11 +79,12 @@ if (isset($_GET["tab"])) {
                             d="M120.303 136.807C158.014 136.807 188.577 106.243 188.577 68.5327C188.577 30.8219 158.014 0.258667 120.303 0.258667C82.5921 0.258667 52.0289 30.8219 52.0289 68.5327C52.0289 106.243 82.5921 136.807 120.303 136.807ZM168.095 153.875H159.187C147.346 159.316 134.171 162.409 120.303 162.409C106.435 162.409 93.3133 159.316 81.4187 153.875H72.5111C32.9335 153.875 0.823364 185.985 0.823364 225.563V247.752C0.823364 261.887 12.2913 273.355 26.4261 273.355H214.18C228.314 273.355 239.782 261.887 239.782 247.752V225.563C239.782 185.985 207.672 153.875 168.095 153.875Z"
                             fill="black" />
                     </svg>
-                    <?php echo $_SESSION['name']    ; ?>
+                    <?php echo $_SESSION['name']; ?>
                 </button>
 
-                
-                <a href="__DIR__./../front_web/signout.php"><button class="btn btn-outline-primary my-2 my-sm-0 ml-2" type="submit">Đăng xuất</button></a>
+
+                <a href="__DIR__./../front_web/signout.php"><button class="btn btn-outline-primary my-2 my-sm-0 ml-2"
+                        type="submit">Đăng xuất</button></a>
             <?php } else { ?>
 
                 <a href="__DIR__ ./../front_web/signin.php">
@@ -92,7 +92,22 @@ if (isset($_GET["tab"])) {
                 </a>
             <?php } ?>
             <!-- Login Button -->
-            
+
         </div>
     </nav>
 </div>
+<script>
+    function checkSearch() {
+        // Lấy giá trị từ ô nhập liệu
+        var searchValue = document.getElementById('searchInput').value;
+
+        // Kiểm tra xem ô nhập liệu có dữ liệu hay không
+        if (searchValue.trim() === "") {
+            alert("Vui lòng nhập thông tin để tìm kiếm.");
+            return false; // Ngăn chặn gửi form
+        }
+
+        // Nếu có dữ liệu, tiếp tục gửi form
+        return true;
+    }
+</script>
