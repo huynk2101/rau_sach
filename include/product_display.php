@@ -5,7 +5,7 @@ if (isset($_GET['page'])) {
 } else {
     $page = 1;
 }
-$row_per_page = 3;
+$row_per_page = 4;
 $per_row = ($page - 1) * $row_per_page;
 include __DIR__."/../include/product.php";
 $result = mysqli_query($conn, $sql);

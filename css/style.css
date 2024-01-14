@@ -1,6 +1,18 @@
 *{
     font-family: 'Quicksand', sans-serif;
 }
+@media only screen and (max-width: 768px) {
+    .col-sm-3{
+        width: 50%!important;
+    }
+    .col-3{
+        width: 100%!important;
+        margin-top: 10px!important;
+    }
+    .col-6{
+        width: 100%!important;
+    }
+}
 img[alt~="icon"]{
     margin-right: 45px;
 }
@@ -45,7 +57,7 @@ div a{
 .button:hover::before{
     width: 100%;
 }
-.col-md-2 .card,.card{
+.col-sm-3 .card,.card{
     height: 340px;
     display: inline-block;
     position: relative;

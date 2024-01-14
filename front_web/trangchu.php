@@ -1,6 +1,4 @@
-<?php 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);?>
+
     <main>
         <div id="carousel1" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -129,12 +127,12 @@ ini_set('display_errors', 1);?>
         </div>
         <div class="container-fluid pt-5">
             <div class="row">
-                <div class="col-5"
+                <div class="col-6"
                     style="background: url(https://theme.hstatic.net/1000309753/1000718324/14/home_about_image.jpg?v=209);height: 700px; padding-top: 300px;padding-left: 60px;">
                     <h2 style="font-size: 55px;color:white;">Về chúng tôi</h2>
                     <a href="./gioithieu.php" class="button">Xem ngay</a>
                 </div>
-                <div class="col-7" style="padding: 90px;">
+                <div class="col-6">
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam deleniti, voluptas sequi
                         incidunt qui ex sit blanditiis dolorem dicta quod impedit dignissimos delectus, consequuntur,
