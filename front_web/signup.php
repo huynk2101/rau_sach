@@ -9,9 +9,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
-<body>
+<body style="background-repeat: no-repeat;
+    background-image: url(../img/bg/organic-food.jpg);
+    background-size: cover;"> 
 
-    <div class="container mt-3">
+    <div class="container mt-3" >
         <h2>Đăng ký</h2>
         <?php
         if (isset($_GET['error'])) {
@@ -43,8 +45,9 @@
                 <label for="address">Address:</label>
                 <input type="text" class="form-control" required id="address" placeholder="Enter address" name="address">
             </div>
-            <button type="submit" class="btn btn-primary">Đăng ký</button>
+            <button type="submit" class="btn btn-primary mb-2">Đăng ký</button>
         </form>
+        <a href="../index.php"><button class="btn btn-info">Về trang chủ</button></a>
     </div>
 
 </body>

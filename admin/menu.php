@@ -17,15 +17,16 @@
 </head>
 
 <body>
-    <div class="container mt-3">
+    <div class="container mt-3 w-75">
         <h2>Menu</h2>
         <p>Xin chào <?php echo $_SESSION['name']?></p>
-        <a href="../front_web/signout.php">Đăng xuất</a>
+        
+        <a href="../front_web/signout.php"><button class="btn btn-success mb-2">Đăng xuất</button></a>
         <ul class="list-group w-25">
-            <li class="list-group-item"><a target="blank" href="show_all_product.php">Sản phẩm</a></li>
-            <li class="list-group-item"><a target="blank" href="show_all_customer.php">Khách hàng</a></li>
-            <li class="list-group-item"><a target="blank" href="delivery.php">Hóa Đơn</a></li>
-            <li class="list-group-item"><a target="blank" href="sanphambanchay.php">Doanh số</a></li>
+            <li class="list-group-item"><a target="blank" href="show_all_product.php"><button class="btn btn-primary">Sản phẩm</button></a></li>
+            <li class="list-group-item"><a target="blank" href="show_all_customer.php"><button class="btn btn-primary">Khách hàng</button></a></li>
+            <li class="list-group-item"><a target="blank" href="delivery.php"><button class="btn btn-primary">Hóa Đơn</button></a></li>
+            <li class="list-group-item"><a target="blank" href="sanphambanchay.php"><button class="btn btn-primary">Doanh số</button></a></li>
         </ul>
     </div>
 </body>
