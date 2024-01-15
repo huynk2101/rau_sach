@@ -28,15 +28,15 @@
                                         sản phẩm
                                         <span class="caret"></span></button>
                                     <ul class="dropdown-menu">
-                                        <li><a href="?price=product_price >=0 &tab=sanpham">Tất cả giá</a></li>
+                                        <li><a href="?price=product_price >0 &tab=sanpham">Tất cả giá</a></li>
                                         <li><a
-                                                href="?price=product_price >=0 &&product_price <= 50000 &tab=sanpham">0-50000₫</a>
+                                                href="?price=product_price > 0&price2=product_price < 50000 &tab=sanpham">0-50000₫</a>
                                         </li>
                                         <li><a
-                                                href="?price=product_price >= 50000 &&product_price <= 100000 &tab=sanpham">50000-100000₫</a>
+                                                href="?price=product_price >= 50000&price2=product_price < 100000 &tab=sanpham">50000-100000₫</a>
                                         </li>
                                         <li><a
-                                                href="?price=product_price >= 100000 &&product_price <= 150000 &tab=sanpham">100000-150000₫</a>
+                                                href="?price=product_price >= 100000&price2=product_price < 150000 &tab=sanpham">100000-150000₫</a>
                                         </li>
                                         <li><a href="?price=product_price >= 150000 &tab=sanpham">Trên
                                                 150000₫</a>

@@ -18,7 +18,7 @@ $url=$_SERVER['REQUEST_URI'];
                 <?php echo $row['product_name'] ?>
                 </h5>
                 <p class="card-text">
-                    <?php echo $row['product_price'] ?>₫ <span style="color:black">số lượng:
+                    <?php echo $row['product_price'] ?>₫ <span style="color:black"><br>số lượng:
                     <?php echo $row['product_quantity'] ?></span>
                 </p>
                 <div class="text-center">
