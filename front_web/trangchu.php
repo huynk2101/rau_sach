@@ -86,7 +86,7 @@
                         <div class="card-img-overlay">
                             <p>Sản phẩm bán chạy</p>
                             <h4>Món ngon buổi sáng</h4><br>
-                            <a href="" class="button">Mua ngay</a>
+                            <a href="?tab=sanpham" class="button">Mua ngay</a>
                         </div>
                     </div>
                 </div>
@@ -99,7 +99,7 @@
                         <div class="card-img-overlay">
                             <p>BOUILLABAISSE</p>
                             <h4>SALAD KIỂU PHÁP</h4><br>
-                            <a href="" class="button">Xem thêm</a>
+                            <a href="?tab=sanpham" class="button">Xem thêm</a>
                         </div>
                     </div>
                 </div>
@@ -112,7 +112,7 @@
                         <div class="card-img-overlay">
                             <p>Sản phẩm mới</p>
                             <h4>BUỔI SÁNG HEALTHY</h4><br>
-                            <a href="" class="button">Xem thêm</a>
+                            <a href="?tab=sanpham" class="button">Xem thêm</a>
                         </div>
                     </div>
                 </div>

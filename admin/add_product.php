@@ -49,6 +49,11 @@
                 placeholder="Enter price" name="price">
         </div>
         <div class="mb-3 mt-3">
+            <label for="quantity" class="form-label">Số lượng:</label>
+            <input type="number" required min="1" step="1" class="form-control" id="quantity"
+                placeholder="Enter quantity" name="quantity">
+        </div>
+        <div class="mb-3 mt-3">
             <label for="detail">Mô tả:</label>
             <textarea class="form-control" rows="5" id="comment" name="detail" value="chưa có"></textarea>
         </div>
