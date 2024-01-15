@@ -7,7 +7,7 @@
     } else {
         $page = 1;
     }
-    $row_per_page = 10;
+    $row_per_page = 1;
     $per_row = ($page - 1) * $row_per_page;
     $sql = mysqli_query($conn, "SELECT * FROM tbl_khachhang WHERE permission = 0 LIMIT " . $per_row . "," . $row_per_page);
     $total_record = mysqli_query($conn, "SELECT * FROM tbl_khachhang WHERE permission = 0");
@@ -54,7 +54,7 @@
             $prev_page = $page - 1;
             ?>
             <li class="page-item">
-                <a class="page-link" href="?page= <?php echo $prev_page ?>">
+                <a class="page-link" href="?page= <?php echo $prev_page ?>&tab=khachhang">
                     Prev
                 </a>
             </li>
@@ -65,7 +65,7 @@
                 <?php if ($num_page > $page - 3 && $num_page < $page + 3) {
                     ?>
                     <li class="page-item">
-                        <a class="page-link" href="?page= <?php echo $num_page; ?>">
+                        <a class="page-link" href="?page= <?php echo $num_page; ?>&tab=khachhang">
                             <?php echo $num_page;
                             ?>
                         </a>
@@ -84,7 +84,7 @@
             $next_page = $page + 1;
             ?>
             <li class="page-item">
-                <a class="page-link" href="?page= <?php echo $next_page ?>">
+                <a class="page-link" href="?page= <?php echo $next_page ?>&tab=khachhang">
                     Next
                 </a>
             </li>

@@ -31,26 +31,48 @@
         <a href="../front_web/signout.php"><button class="btn btn-success mb-2">Đăng xuất</button></a>
     </div>
     <div class="row">
+        <?php
+        $tab = "sanpham";
+        if (isset($_GET['tab'])) {
+            $tab = $_GET['tab'];
+        }
+        ?>
         <div class="col-2 border">
             <ul class="nav flex-column">
-                <li class="nav-item">
+                <li class="nav-item <?php
+                if ($tab == "sanpham") {
+                    echo "active";
+                }
+                ?>">
                     <a class="nav-link" href="?tab=sanpham">
-                        <button class="btn btn-primary">Sản phẩm</button>
+                        Sản phẩm
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item <?php
+                if ($tab == "khachhang") {
+                    echo "active";
+                }
+                ?>">
                     <a class="nav-link" href="?tab=khachhang">
-                        <button class="btn btn-primary">Khách hàng</button>
+                        Khách hàng
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item <?php
+                if ($tab == "hoadon") {
+                    echo "active";
+                }
+                ?>">
                     <a class="nav-link" href="?tab=hoadon">
-                        <button class="btn btn-primary">Hóa đơn</button>
+                        Hóa đơn
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item <?php
+                if ($tab == "doanhthu") {
+                    echo "active";
+                }
+                ?>">
                     <a class="nav-link" href="?tab=doanhthu">
-                        <button class="btn btn-primary">Doanh thu</button>
+                        Doanh thu
                     </a>
                 </li>
             </ul>

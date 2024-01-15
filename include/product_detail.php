@@ -5,6 +5,7 @@ if (isset($_GET["page"])) {
     $param="&page=".$page1;
 }
 $url=$_SERVER['REQUEST_URI'];
+
 ?>
 <div class="col-sm-3 mt-2" id=<?php echo $row["product_id"] ?>>
     <div class="card w-100">
@@ -21,6 +22,10 @@ $url=$_SERVER['REQUEST_URI'];
                     <?php echo $row['product_quantity'] ?></span>
                 </p>
                 <div class="text-center">
+                    <?php 
+                    if ($row['product_quantity']<=0) {
+                        echo "Hết hàng";
+                    }else{?>
                     <?php if (empty($_SESSION['id'])) { ?>
                         <a href="__DIR__ ./../front_web/signin.php"><button>Thêm vào giỏ hàng</button></a>
 
@@ -29,6 +34,7 @@ $url=$_SERVER['REQUEST_URI'];
                             href="__DIR__ ./../front_web/themgiohang.php?pro_id=<?php echo $row['product_id'] ?>&url=<?php echo $url;?><?php echo $param; ?>"><button>Thêm
                                 vào giỏ hàng</button></a>
                     <?php } ?>
+                    <?php }?>
                 </div>
 
         </div>

@@ -36,7 +36,7 @@
         }
         if (isset($_GET["url"])) {
             $url = $_GET["url"];
-            $param .= "&url=".$url;
+            $param .= "&url=" . $url;
         }
         include("../db/connect.php");
         $product = mysqli_query($conn, "SELECT * FROM tbl_sanpham where product_id =" . $_GET['pro_id']);
@@ -57,9 +57,19 @@
                     </p>
                 </div><br>
                 <div class="text-center">
-                    <a href="themgiohang.php?pro_id=<?php echo $result['product_id'] ?><?php echo $param; ?>">
-                        <button style="background-color:green;width:100%;height:30px;border:0;">Thêm vào giỏ</button>
-                    </a>
+                    <?php
+                    if ($result['product_quantity'] <= 0) {
+                        echo "Hết hàng";
+                    } else { ?>
+                        <?php if (empty($_SESSION['id'])) { ?>
+                            <a href="./signin.php"><button>Thêm vào giỏ hàng</button></a>
+
+                        <?php } else { ?>
+                            <a href="themgiohang.php?pro_id=<?php echo $result['product_id'] ?><?php echo $param; ?>">
+                                <button style="background-color:green;width:100%;height:30px;border:0;">Thêm vào giỏ</button>
+                            </a>
+                        <?php } ?>
+                    <?php } ?>
                 </div>
 
                 <h4>Mô tả</h4>

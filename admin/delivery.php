@@ -3,13 +3,13 @@
     <div class="container">
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link" href="?detail=1">Chờ giao</a>
+                <a class="nav-link" href="?detail=1&tab=hoadon">Chờ giao</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="?detail=2">Đang giao</a>
+                <a class="nav-link" href="?detail=2&tab=hoadon">Đang giao</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="?detail=3">Đã giao</a>
+                <a class="nav-link" href="?detail=3&tab=hoadon">Đã giao</a>
             </li>
         </ul>
         <?php require("../db/connect.php");

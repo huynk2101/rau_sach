@@ -5,7 +5,7 @@ if (isset($_GET["id"])) {
     $product_id = $_GET["id"];
     $sql = "UPDATE tbl_sanpham SET active=0 WHERE product_id='$product_id'";
     $result = mysqli_query($conn,$sql);
-    header("location:show_all_product.php?report=Xóa thành công");
+    header("location:menu.php?report=Xóa thành công");
     exit();
 }
 if (isset($_GET["cate_id"])) {
