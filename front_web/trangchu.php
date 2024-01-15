@@ -128,31 +128,21 @@
         <div class="container-fluid pt-5">
             <div class="row">
                 <div class="col-6"
-                    style="background: url(https://theme.hstatic.net/1000309753/1000718324/14/home_about_image.jpg?v=209);height: 700px; padding-top: 300px;padding-left: 60px;">
+                    style="background: url(https://theme.hstatic.net/1000309753/1000718324/14/home_about_image.jpg?v=209);background-repeat:no-repeat;height: 700px; padding-top: 300px;padding-left: 60px;">
                     <h2 style="font-size: 55px;color:white;">Về chúng tôi</h2>
                     <a href="./gioithieu.php" class="button">Xem ngay</a>
                 </div>
-                <div class="col-6">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam deleniti, voluptas sequi
-                        incidunt qui ex sit blanditiis dolorem dicta quod impedit dignissimos delectus, consequuntur,
-                        hic culpa voluptate fugiat aut aperiam natus. Accusantium amet aliquid rem dolorem voluptate
-                        necessitatibus at officiis voluptas voluptatum optio recusandae dolore quos facere autem neque,
-                        quaerat molestias quis, nostrum ipsum? Velit doloribus dolor voluptatibus quibusdam debitis
-                        ducimus reiciendis inventore a unde, iste harum rerum pariatur asperiores corrupti tempora nemo
-                        quaerat praesentium voluptas consequatur repellat voluptate id eaque saepe? Reiciendis, vel.
-                        Similique, non sunt. Voluptas, omnis. Fugiat ab tenetur culpa rem, repellendus nisi. Voluptatum
-                        id assumenda earum veritatis. Dolor alias magni reprehenderit ipsa. Repudiandae dolorem culpa
-                        eligendi iusto, deserunt, maxime nesciunt accusantium saepe ipsa placeat itaque impedit
-                        laboriosam. Quae doloribus atque iste sint quisquam sunt nesciunt voluptates, reiciendis
-                        voluptatem nam deleniti facilis recusandae commodi error, in architecto qui. Perferendis
-                        quibusdam aspernatur, nulla esse nihil accusamus veritatis quis fugit debitis praesentium
-                        nesciunt omnis et sequi quod sed expedita odit necessitatibus facere. Corporis omnis, suscipit,
-                        perspiciatis nam, repudiandae aliquid delectus dolorum quia quos molestiae unde. Iusto delectus
-                        voluptas veniam. Veritatis voluptates ipsum ut officiis maxime quae eaque. Vitae eveniet neque
-                        illo ex asperiores tempora rerum praesentium velit ipsum! Voluptate!
+                <div class="col-6" style="background-color: rgba(173, 255, 47, 0.1);">
+                    <p>                    Tại Fresh Organic, chúng tôi đam mê cung cấp cho bạn những sản phẩm hữu cơ chất lượng cao trực tiếp từ những nguồn tài nguyên thiên nhiên. Chúng tôi tin vào sức mạnh của thực phẩm tự nhiên, lành mạnh để nuôi dưỡng và tái tạo cơ thể của bạn, đồng thời thúc đẩy các phương pháp bền vững và thân thiện với môi trường.
                     </p>
+                    <p>
+                    Từ rau củ tươi sáng và tươi ngon cho đến trái cây thịt mềm và đậm đà, danh mục sản phẩm tươi của chúng tôi được chọn lọc cẩn thận để mang đến cho bạn những gì tốt nhất từ thiên nhiên. Chúng tôi ưu tiên sự thích hợp theo mùa, đảm bảo bạn có thể thưởng thức hương vị và chất dinh dưỡng tối đa. Với Fresh Organic, bạn có thể tin tưởng mỗi miếng thức ăn đều tràn đầy hương vị, tốt cho sức khỏe và mang lại tác động tích cực cho môi trường.
+                    </p>
+                    <p>Ngoài loại rau củ và trái cây đa dạng, chúng tôi cũng cung cấp một loạt các sản phẩm hữu cơ khác, bao gồm các mặt hàng cần thiết cho nhà bếp, sản phẩm từ sữa, thịt và nhiều hơn thế nữa. Mỗi sản phẩm được lựa chọn một cách cẩn thận để đáp ứng các tiêu chuẩn chất lượng nghiêm ngặt của chúng tôi, giúp bạn tạo ra những bữa ăn ngon lành và bổ dưỡng cho bạn và người thân yêu của bạn.</p>
+                    <p>Hãy cùng chúng tôi trên hành trình hướng tới một lối sống lành mạnh và bền vững hơn. Trải nghiệm sự khác biệt mà Fresh Organic mang đến cho bữa ăn của bạn - một hương vị tinh khiết, một cam kết chân thành và một tương lai xanh hơn. Khám phá danh mục sản phẩm của chúng tôi ngay hôm nay và khám phá niềm vui của cuộc sống tươi mới, hữu cơ.</p>
                 </div>
+            </div>
+        </div>
             </div>
         </div>
     </main>
