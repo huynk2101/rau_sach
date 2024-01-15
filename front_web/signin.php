@@ -25,11 +25,11 @@
         ?>
         <form action="process_signin.php" method="post">
             <div class="mb-3 mt-3">
-                <label for="email">Email:</label>
+                <label for="email" class="bg-light rounded">Email:</label>
                 <input type="email" class="form-control" required id="email" placeholder="Enter email" name="email">
             </div>
             <div class="mb-3">
-                <label for="password">Password:</label>
+                <label for="password" class="bg-light rounded">Password:</label>
                 <input type="password" class="form-control" required id="pwd" placeholder="Enter password"
                     name="password">
             </div>

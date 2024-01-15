@@ -8,19 +8,19 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <a href="./chitietsp.html" target="blank"><img
+                    <img
                             src="https://theme.hstatic.net/1000309753/1000718324/14/slideshow_1.jpg?v=209"
-                            class="d-block w-100" alt="slideshow 1"></a>
+                            class="d-block w-100" alt="slideshow 1">
                 </div>
                 <div class="carousel-item">
-                    <a href="./chitietsp.html" target="blank"><img
+                    <img
                             src="https://theme.hstatic.net/1000309753/1000718324/14/slideshow_2.jpg?v=209"
-                            class="d-block w-100" alt="slideshow 2"></a>
+                            class="d-block w-100" alt="slideshow 2">
                 </div>
                 <div class="carousel-item">
-                    <a href="./chitietsp.html" target="blank"><img
+                    <img
                             src="https://theme.hstatic.net/1000309753/1000718324/14/slideshow_3.jpg?v=209"
-                            class="d-block w-100" alt="slideshow 3"></a>
+                            class="d-block w-100" alt="slideshow 3">
                 </div>
             </div>
         </div>

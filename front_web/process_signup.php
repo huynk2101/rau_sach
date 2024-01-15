@@ -3,7 +3,7 @@ session_start();
 $name = $_POST['name'];
 $email = $_POST['email'];
 $password = $_POST['password'];
-$phone = $_POST['phone'];
+$phone_number = $_POST['phone'];
 $address = $_POST['address'];
 
 require('../db/connect.php');
@@ -25,7 +25,7 @@ $id = mysqli_fetch_array($result)["id"] ;
 $_SESSION['id'] = $id ;
 $_SESSION['name'] = $name ;
 $_SESSION['address'] = $address ;
-$_SESSION['phone'] = $phone ;
+$_SESSION['phone'] = $phone_number ;
 
 mysqli_close($conn);
 header('location:signin.php?success=Tạo tài khoản thành công mời bạn đăng nhập');

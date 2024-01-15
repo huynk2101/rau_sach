@@ -20,8 +20,8 @@ li a{
     margin-left: 10px;
     margin-right: 10px;
 }
-div a{
-    text-decoration: none;
+div a,table a{
+    text-decoration: none!important;
 }
 .nav-item.active{
     background-color: rgb(126, 236, 71);
@@ -58,7 +58,7 @@ div a{
     width: 100%;
 }
 .col-sm-3 .card,.card{
-    height: 340px;
+    height: 350px;
     display: inline-block;
     position: relative;
     overflow: hidden;
