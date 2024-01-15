@@ -19,6 +19,7 @@ $total_page = ceil($total_record / $row_per_page);
         <th>Danh mục</th>
         <th>Ảnh</th>
         <th>Giá</th>
+        <th>Số lượng</th>
         <th>Mô tả</th>
     </tr>
     <?php
@@ -41,6 +42,9 @@ $total_page = ceil($total_record / $row_per_page);
             <th><img src="../img/product/<?php echo $row['product_image'] ?>" width="100px" height="100px" alt="image"></th>
             <th>
                 <?php echo $row['product_price'] ?>
+            </th>
+            <th>
+                <?php echo $row['product_quantity'] ?>
             </th>
             <th>
                 <?php echo $row['detail'] ?>

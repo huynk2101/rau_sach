@@ -19,6 +19,6 @@ if (isset($_POST["btn"])) {
     $sql = "INSERT INTO tbl_sanpham (category_id,product_image, product_name, product_price, product_quantity, detail) VALUES ('$category_id','$image','$name','$price','$quantity','$detail')";
     $result = mysqli_query($conn, $sql);
     move_uploaded_file($tmp_image, '../img/product/' . $image);
-    header('location:add_product.php');
+    header('location:./menu.php?tab=sanpham');
 }
 ?>
